@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DrumKit</title>
+    <style>
+        body{
+            background: #141E30;
+            background: -webkit-linear-gradient(to right, #243B55, #141E30);
+            background: linear-gradient(to right, #243B55, #141E30);
+
+        }
+        .container{
+            height: 435px;
+        }
+        .header{
+            text-align: center;
+            margin: 0px 100px 100px 100px;
+            color: #97DBAE;
+        }
+     .adjustment{
+         display: inline-block;
+         height: auto;
+         width: 30%;
+         border-radius: 10%;
+         margin: 30px;
+         border: 6px solid grey;
+     }
+     #piano{
+         width: 21rem;
+     }
+     #guitar{
+         width:23rem;
+     }
+     #drum{
+         width: 25rem;
+     }
+     .adjustment:hover{
+        transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+     }
+
+     footer span{
+         display: inline-block;
+        position: relative;
+        left: 600px;
+        top: 20px;
+     }
+
+     @media (max-width: 500px){
+         #drum{
+            width: 17em;
+         }
+         #guitar{
+            width: 17em;
+         }
+         #piano{
+            width: 17em;
+         }
+         footer span{
+         display: inline-block;
+        position: relative;
+        left: 87px;
+        top: 325px;
+     }
+     .container{
+         height: 540px;
+     }
+     }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Music❤️Kit</h1>
+    </div>
+
+    <div class="container">
+            <img src="images/drum.jpg" alt="drum" class="adjustment" id="drum">
+            <img src="images/piano.jpg" alt="" class="adjustment" id="piano">
+            <img src="images/guitar.jpg" alt="" class="adjustment" id="guitar">
+    </div>
+
+    <footer>
+            <span>Made With ❤️ By Shubh</span>
+    </footer>
+    <script>
+         function pianosound(){
+            var pianoaudio = new Audio("audio/piano.mp3");
+            pianoaudio.play();
+        }
+        function drumsound(){
+            var drumaudio = new Audio("audio/drum.mp3");
+            drumaudio.play();
+        }
+        function guitarsound(){
+            var guitaraudio = new Audio("audio/guitar.mp3");
+            
+            guitaraudio.play();
+        }
+        document.getElementById("piano").addEventListener("click", pianosound)
+        document.getElementById("drum").addEventListener("click", drumsound)
+        document.getElementById("guitar").addEventListener("click", guitarsound)
+       
+    </script>
+</body>
+</html>
